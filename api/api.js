@@ -33,7 +33,7 @@ router.get('/:name', (req, res, next) => {
     },
 
     (category, callback) => {
-        for(var i = 0; i < 30; i++){
+        for(var i = 0; i < 12; i++){
             var product = new Product();
             product.category = category._id;
             product.name = faker.commerce.productName();

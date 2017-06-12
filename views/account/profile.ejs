@@ -12,7 +12,7 @@
 
       <% if(user.address === "" || typeof user.address ===  'undefined') {%>
         <p>Address: <span style="color: #c0392b; font-weight: bold">You have no address</span></p>
-            
+
         <% } else { %>
 
       <p>Address: <%= user.address %></p>
@@ -21,5 +21,31 @@
 
       <a href="/edit-profile" class = "btn btn-primary btn-lg">Edit Profile</a>
     </div>
+
+    <div class="col-md-6">
+  <h2 class="text-center">History</h2>
+
+  <table class="table table-striped sticky-header">
+    <thead>
+    <tr>
+      <th>Item's Name</th>
+      <th>Paid: </th>
+    </tr>
+    <tbody>
+      <% for(var i = 0; i < user.history.length; i++) {%>
+        <tr>
+          <td><%= user.history[i].item.name %></td>
+          <td><%= user.history[i].paid %></td>
+        </tr>
+      <p hidden><%=sum += user.history[i].paid%></p>
+      <% } %>
+      <td style="color:green; font-size:large">Total</td>
+      <td style="color:green; font-size:large"><%=sum%></td>
+    </tbody>
+    </thead>
+  </table>
+
+</div>
+
   </div>
 </div>

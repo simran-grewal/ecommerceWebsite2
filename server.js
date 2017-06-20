@@ -63,7 +63,11 @@ var apiRoutes = require('./api/api');
 app.use(mainRoutes);
 app.use(userRoutes);
 app.use(adminRoutes);
-app.use('/api',apiRoutes)
+app.use('/api',apiRoutes);
+
+app.get('*', (req, res, next) => {
+  res.render('main/home');
+})
 app.listen(port, (err) => {
   if(err) throw err;
   console.log('Server is Running on '+ secret.port);

@@ -1,5 +1,7 @@
 body{
-  padding-top: 60px;
+    padding-top: 60px;
+    color: #555555;
+
 }
 
 #navbar-gap {
@@ -119,4 +121,16 @@ body{
 {
     display: block;
     margin-top: 10px;
+}
+
+button:hover {
+  transform: scale(1.2);
+}
+
+.TransDiv div:hover {
+  transform: scale(1.1);
+}
+
+a: hover {
+  transform: scale(1.1);
 }
